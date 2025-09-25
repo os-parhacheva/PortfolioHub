@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioHub.Domain", "Port
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioHub.Infrasrtructure", "PortfolioHub.Infrasrtructure\PortfolioHub.Infrasrtructure.csproj", "{310427B1-E26F-441B-A416-F3FB303BC1D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{AA4FA638-2FC5-45CD-A6D9-FE299C00568D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{310427B1-E26F-441B-A416-F3FB303BC1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{310427B1-E26F-441B-A416-F3FB303BC1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{310427B1-E26F-441B-A416-F3FB303BC1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4FA638-2FC5-45CD-A6D9-FE299C00568D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4FA638-2FC5-45CD-A6D9-FE299C00568D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4FA638-2FC5-45CD-A6D9-FE299C00568D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4FA638-2FC5-45CD-A6D9-FE299C00568D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

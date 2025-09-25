@@ -82,5 +82,10 @@ namespace PortfolioHub.Infrasrtructure
             await _context.SaveChangesAsync();
         }
 
+        public void ChangeTrackerClear()
+        {
+            _context.ChangeTracker.Clear();
+        }
+
     }
 }
