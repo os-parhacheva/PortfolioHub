@@ -40,7 +40,7 @@ namespace TestProject
         [Fact]
         public async Task TestAddNewUserWithCompetition()
         {
-            User user = new User { Id = Guid.NewGuid(), FirstName = "Anna" };
+            User user = new User { Id = Guid.NewGuid(), FirstName = "Milana" };
             user.Achievements.Add(
                 new Competition 
                 {
@@ -99,13 +99,44 @@ namespace TestProject
         [Fact]
         public async Task TestAddNewUserWithCourse()
         {
+            User user = new User { Id = Guid.NewGuid(), FirstName = "Milana" };
+            user.Achievements.Add( new Course
+            {
+                Id = Guid.NewGuid(),               
+                Title = "Math"
+            });
+            user.Achievements.Add(new Course
+            {
+                Id = Guid.NewGuid(),               
+                Title = "History"
+            });
 
+            await _userRepository.AddAsync(user); 
+            _userRepository.ChangeTrackerClear();
+
+            Assert.Equal(2, _userRepository.GetCoursesByUserAsync(user.Id).Result.Count);
+            Assert.Equal("History", _userRepository.GetCoursesByUserAsync(user.Id).Result[1].Title);
 
         }
         [Fact]
         public async Task TestAddNewUserWithPublication()
         {
+            User user = new User { Id = Guid.NewGuid(), FirstName = "Olga" };
+            user.Achievements.Add(new Publication
+            {
+                Id = Guid.NewGuid(),
+                Title = "Research Paper",
+                Authors = new List<Author>
+                {
+                    new Author { Id = Guid.NewGuid(), Name = "Author1" }
+                }
+            });
+            
+            await _userRepository.AddAsync(user);
+            _userRepository.ChangeTrackerClear();
 
+            Assert.Single(_userRepository.GetPublicationsByUserAsync(user.Id).Result);
+            Assert.Equal("Research Paper", _userRepository.GetPublicationsByUserAsync(user.Id).Result[0].Title);
 
         }
     }
