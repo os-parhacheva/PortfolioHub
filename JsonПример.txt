@@ -1,0 +1,93 @@
+{
+  
+  "firstName": "Varvara",
+  "lastName": "Novikova",
+  "middleName": "Fedorovna",
+  "birthDate": "1996-01-25",
+  "email": "varvar@mail.ru",
+  "phone": "89312229933",
+  "university": "SPbGY",
+  "faculty": "string",
+  "speciality": "string",
+  "graid": 1,
+  "competitions": [
+    {
+      "title": "Competition1",
+      "description": "Test",
+      "date": "2026-01-25T20:00:42.394Z",
+      "url": "string",
+      "editDate": "2026-01-25T20:00:42.394Z",
+      "editBy": "Admin",      
+      
+      "stages": [
+        {
+          "number": 1,
+          "result": "Win",
+          "fund": 5000,
+          "deadline": "2026-01-25T20:00:42.394Z",
+          "participants": [
+            {
+              
+              "surname": "string",
+              "name": "Varvara",
+              "middleName": "string",
+              
+              "role": "Lider"
+              
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conferences": [
+    {
+     
+      "title": "HelloKitty",
+      "description": "string",
+      "date": "2026-01-25T20:00:42.394Z",
+      "url": "string",
+      "editDate": "2026-01-25T20:00:42.394Z",
+      "editBy": "string",
+      
+      "organizer": "string",
+      "topic": "string",
+      "role": "Spiker"
+    }
+  ],
+  "courses": [
+    {
+      
+      "title": "English",
+      "description": "string",
+      "date": "2026-01-25T20:00:42.394Z",
+      "url": "string",
+      "editDate": "2026-01-25T20:00:42.394Z",
+      "editBy": "Admin",
+      "hours": 100
+    }
+  ],
+  "publications": [
+    {
+      "title": "NewKitty",
+      "description": "string",
+      "date": "2026-01-25T20:00:42.394Z",
+      "url": "string",
+      "editDate": "2026-01-25T20:00:42.394Z",
+      "editBy": "Admin",
+      
+      "journal": "string",
+      "doi": "string",
+      "authors": [
+        {
+          
+          "surname": "string",
+          "name": "Varvara",
+          "middleName": "string",
+        
+          "role": "string"
+        }
+      ]
+    }
+  ]
+}

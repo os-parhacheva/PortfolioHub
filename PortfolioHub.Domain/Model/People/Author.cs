@@ -12,6 +12,6 @@ namespace PortfolioHub.Domain
     public class Author : Person
     {
         public Guid PublicationId { get; set; } 
-        public Publication Publication { get; set; }
+        public Publication Publication { get; set; } = new Publication();
     }
 }

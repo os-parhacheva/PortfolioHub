@@ -12,7 +12,7 @@ namespace PortfolioHub.Domain
         public string Surname { get; set; } = "";
         public string Name { get; set; } = "";
         public string MiddleName { get; set; } = "";
-        public Guid UserId { get; set; } = Guid.Empty;
+        public Guid UserId { get; set; }
         public string Role { get; set; } = ""; // Роль (участник, лидер, автор, докладчик)
     }
 }

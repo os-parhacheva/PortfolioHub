@@ -28,4 +28,8 @@
     <ProjectReference Include="..\PortfolioHub.Infrasrtructure\PortfolioHub.Infrasrtructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTO\ModelDTO\PeopleDTO\Новая папка\" />
+  </ItemGroup>
+
 </Project>

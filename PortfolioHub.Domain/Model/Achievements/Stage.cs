@@ -23,7 +23,7 @@ namespace PortfolioHub.Domain
 
         // Связь с конкурсом
         public Guid CompetitionId { get; set; }
-        public Competition Competition { get; set; }
+        public Competition Competition { get; set; } = new Competition();
 
         // Список участников этапа
         public List<Participant> Participants { get; set; } = new();

@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PortfolioHub.Domain
+﻿using PortfolioHub.API.DTO.ModelDTO;
+namespace PortfolioHub.API.DTO
 {
-    /// <summary>
-    /// Основной агрегат – студент / пользователь системы
-    /// </summary>
-    public class User
+    public class UserDTO
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; } = "";
@@ -20,7 +12,7 @@ namespace PortfolioHub.Domain
         public string Email { get; set; } = "";
         public string Phone { get; set; } = "";
         // Университет
-        public string University { get; set; } = ""; 
+        public string University { get; set; } = "";
         // Факультет
         public string Faculty { get; set; } = "";
         // Специальность
@@ -29,9 +21,9 @@ namespace PortfolioHub.Domain
         public int Graid { get; set; }
 
         // Список всех достижений пользователя (конкурсы, публикации, курсы, конференции)
-        public List<Competition> Competitions { get; set; } = new();
-        public List<Conference> Conferences { get; set; } = new();
-        public List<Course> Courses { get; set; } = new();
-        public List<Publication> Publications { get; set; } = new();
+        public List<CompetitionDTO> CompetitionDTOs { get; set; } = new();
+        public List<ConferenceDTO> ConferenceDTOs { get; set; } = new();
+        public List<CourseDTO> CourseDTOs { get; set; } = new();
+        public List<PublicationDTO> PublicationDTOs { get; set; } = new();
     }
 }
