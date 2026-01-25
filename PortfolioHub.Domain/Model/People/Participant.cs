@@ -13,7 +13,7 @@ namespace PortfolioHub.Domain
     public class Participant : Person
     {
         public Guid StageId { get; set; }
-        public Stage Stage { get; set; }
+        public Stage Stage { get; set; } = new Stage();
     }
 
 }

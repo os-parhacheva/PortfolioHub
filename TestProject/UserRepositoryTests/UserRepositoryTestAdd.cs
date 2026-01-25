@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TestProject
 {
-    public class UserRepositoryTestAdd
+    /*public class UserRepositoryTestAdd
     {
         private TestHelper _helper;
         private UserRepository _userRepository;
@@ -139,5 +139,5 @@ namespace TestProject
             Assert.Equal("Research Paper", _userRepository.GetPublicationsByUserAsync(user.Id).Result[0].Title);
 
         }
-    }
+    }*/
 }

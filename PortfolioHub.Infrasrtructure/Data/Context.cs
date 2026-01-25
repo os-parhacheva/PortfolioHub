@@ -15,10 +15,10 @@ namespace PortfolioHub.Infrasrtructure
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+/*        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Achievement>().UseTpcMappingStrategy();  // Используем стратегию TPC
-        }
+        }*/
 
 
 

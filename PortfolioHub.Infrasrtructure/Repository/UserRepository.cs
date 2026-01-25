@@ -25,7 +25,7 @@ namespace PortfolioHub.Infrasrtructure
         }
 
         public async Task<List<User>> GetAllAsync()
-        {
+        {  
             return await _context.Users.OrderBy(p => p.FirstName).ToListAsync();
         }
 

@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PortfolioHub.Domain
+﻿
+namespace PortfolioHub.API.DTO
 {
-    /// <summary>
-    /// Базовый класс для всех достижений (конкурсы, публикации, курсы, конференции)
-    /// </summary>
-    public abstract class Achievement
+    public abstract class AchievementDTO
     {
         public Guid Id { get; set; }
 
@@ -25,10 +17,6 @@ namespace PortfolioHub.Domain
         //Дата последнего изменения
         public DateTime EditDate { get; set; }
         //Автор изменения
-        public string EditBy { get; set; } = "";
-
-        // Связь с пользователем
-        public Guid UserId { get; set; } 
-        public User User { get; set; } = new User();
+        public string EditBy { get; set; }
     }
 }

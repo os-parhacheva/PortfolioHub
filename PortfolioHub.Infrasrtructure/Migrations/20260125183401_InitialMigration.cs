@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PortfolioHub.Infrasrtructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,7 +24,8 @@ namespace PortfolioHub.Infrasrtructure.Migrations
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     University = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Faculty = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Speciality = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Speciality = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Graid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,16 +37,18 @@ namespace PortfolioHub.Infrasrtructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Organizer = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     View = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Result = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Certificate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Certificate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EditDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EditBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -63,14 +66,16 @@ namespace PortfolioHub.Infrasrtructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Organizer = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Topic = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Organizer = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Topic = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    EditDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EditBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -88,14 +93,16 @@ namespace PortfolioHub.Infrasrtructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Platform = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Certificate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Hours = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Platform = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Certificate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Hours = table.Column<int>(type: "int", nullable: false)
+                    EditDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EditBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -113,13 +120,15 @@ namespace PortfolioHub.Infrasrtructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Journal = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Doi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Journal = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Doi = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    EditDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EditBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
