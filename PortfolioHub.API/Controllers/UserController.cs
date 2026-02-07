@@ -41,9 +41,21 @@ namespace PortfolioHub.API.Controllers
             return ToolsDTO.ConvertUserToUserDTO(user);
         }
 
+        //Get api/User/:id/with-courses
+        [HttpGet("{id}/with-courses")]
+        public async Task<ActionResult<UserDTO>> GetUserWithCourses(Guid id)
+        {
+            var user = await _userRepository.GetCoursesByUserAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return ToolsDTO.ConvertUserToUserDTO(user);
+        }
+
         // POST api/User
         [HttpPost]
-        public async Task<ActionResult<User>> PostLesson(User user)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
             await _userRepository.AddAsync(user);
             return Ok();
@@ -51,7 +63,7 @@ namespace PortfolioHub.API.Controllers
 
         // PUT api/User/:id
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutArea(Guid id, [FromBody] User user)
+        public async Task<IActionResult> PutUser(Guid id, [FromBody] User user)
         {
 
             var _user = await _userRepository.GetByIdAsync(id);
@@ -65,7 +77,7 @@ namespace PortfolioHub.API.Controllers
 
         // DELETE api/User/:id
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteArea(Guid id)
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
             User user = await _userRepository.GetByIdAsync(id);
 

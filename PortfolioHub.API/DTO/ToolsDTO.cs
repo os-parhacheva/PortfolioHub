@@ -23,7 +23,7 @@ namespace PortfolioHub.API
                 Graid      = user.Graid,
                 CompetitionDTOs = GetCompetitionDto(user.Competitions),
                 ConferenceDTOs = GetConferenceDto(user.Conferences),
-                CourseDTOs = GetCourseDto(user.Courses),
+                CourseDTOs = GetCoursesDTO(user.Courses),
                 PublicationDTOs = GetPublicationDto(user.Publications)
             };
         }
@@ -153,7 +153,7 @@ namespace PortfolioHub.API
             return conferenceDTOs;
         }
 
-        private static List<CourseDTO> GetCourseDto(List<Course> courses)
+        public static List<CourseDTO> GetCoursesDTO(List<Course> courses)
         {
             List<CourseDTO> courseDTOs = new List<CourseDTO>();
 
@@ -170,12 +170,13 @@ namespace PortfolioHub.API
                     Url = cour.Url,
                     Certificate = cour.Certificate,
                     Hours = cour.Hours,
-                    Platform = cour.Platform
-                    
+                    Platform = cour.Platform,
+                    UserId = cour.UserId                    
                 });
             }
             return courseDTOs;
         }
+
 
     }
 }

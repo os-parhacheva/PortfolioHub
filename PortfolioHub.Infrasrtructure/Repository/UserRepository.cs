@@ -34,28 +34,24 @@ namespace PortfolioHub.Infrasrtructure
             return await _context.Users.OrderBy(p => p.FirstName).SingleOrDefaultAsync(i => i.Id == id);
         }
 
-        public async Task<List<Competition>> GetCompetitionsByUserAsync(Guid userId)
+        public async Task<User> GetCompetitionsByUserAsync(Guid id)
         {
-            return await _context.Competitions
-                .Where(c => c.UserId == userId)
-                .Include(c => c.Stages)
-                    .ThenInclude(s => s.Participants)
-                .ToListAsync();
+            return await _context.Users.Include(c => c.Competitions).ThenInclude(s => s.Stages).SingleOrDefaultAsync(i => i.Id == id);
+            //return await _context.Competitions
+            //    .Where(c => c.UserId == userId)
+            //    .Include(c => c.Stages)
+            //        .ThenInclude(s => s.Participants)
+            //    .ToListAsync();
         }
 
-        public async Task<List<Publication>> GetPublicationsByUserAsync(Guid userId)
+        public async Task<User> GetPublicationsByUserAsync(Guid id)
         {
-            return await _context.Publications
-                .Where(p => p.UserId == userId)
-                .Include(p => p.Authors)
-                .ToListAsync();
+            return await _context.Users.Include(c => c.Publications).SingleOrDefaultAsync(i => i.Id == id);
         }
 
-        public async Task<List<Course>> GetCoursesByUserAsync(Guid userId)
+        public async Task<User> GetCoursesByUserAsync(Guid id)
         {
-            return await _context.Courses
-                .Where(c => c.UserId == userId)                
-                .ToListAsync();
+            return await _context.Users.Include(c => c.Courses).SingleOrDefaultAsync(i => i.Id == id);
         }
 
         public async Task AddAsync(User user)

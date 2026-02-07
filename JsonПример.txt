@@ -91,3 +91,20 @@
     }
   ]
 }
+
+
+------------------------------------------------
+Пример курса
+------------------------------------------------
+{
+  "title": "ASP.NET Core Advanced",
+  "description": "Продвинутый курс по ASP.NET Core",
+  "date": "2025-02-07",
+  "url": "https://example.com/course2",
+  "editDate": "2026-02-07T11:12:24.589Z",
+  "editBy": "Петров П.П.",
+  "userId": "49aa4dea-b974-44fd-3382-08de5c4e2a2f",
+  "platform": "Stepik",
+  "certificate": "ASP.NET Core Expert",
+  "hours": 48
+}

@@ -18,5 +18,8 @@ namespace PortfolioHub.API.DTO
         public DateTime EditDate { get; set; }
         //Автор изменения
         public string EditBy { get; set; }
+
+        // Связь с пользователем
+        public Guid UserId { get; set; }
     }
 }
