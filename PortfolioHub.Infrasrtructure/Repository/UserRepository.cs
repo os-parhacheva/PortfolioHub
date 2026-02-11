@@ -62,10 +62,8 @@ namespace PortfolioHub.Infrasrtructure
 
         public async Task UpdateAsync(User user)
         {
-           /* var existUser = await _context.Users.SingleOrDefaultAsync(i => i.Id == user.Id);
-            _context.Entry(existUser).CurrentValues.SetValues(user);*/
-
-            _context.Users.Update(user);
+            User existUser  = await _context.Users.SingleOrDefaultAsync(i => i.Id == user.Id);
+            _context.Entry(existUser).CurrentValues.SetValues(user);
 
             await _context.SaveChangesAsync();
         }

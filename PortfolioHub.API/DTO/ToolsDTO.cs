@@ -159,6 +159,8 @@ namespace PortfolioHub.API
 
             foreach (Course cour in courses)
             {
+                courseDTOs.Add(GetCourseDTO(cour));
+               /* 
                 courseDTOs.Add(new CourseDTO()
                 {
                     Id = cour.Id,
@@ -172,11 +174,28 @@ namespace PortfolioHub.API
                     Hours = cour.Hours,
                     Platform = cour.Platform,
                     UserId = cour.UserId                    
-                });
+                });*/
             }
             return courseDTOs;
         }
 
+
+        public static CourseDTO GetCourseDTO(Course course)
+        {
+            return new CourseDTO() {
+                Id = course.Id,
+                Title = course.Title,
+                Description = course.Description,
+                Date = course.Date,
+                EditBy = course.EditBy,
+                EditDate = course.EditDate,
+                Url = course.Url,
+                Certificate = course.Certificate,
+                Hours = course.Hours,
+                Platform = course.Platform,
+                UserId = course.UserId
+            };
+        }
 
     }
 }
