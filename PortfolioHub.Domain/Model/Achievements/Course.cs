@@ -12,7 +12,8 @@ namespace PortfolioHub.Domain
     public class Course : Achievement
     {
         public string Platform { get; set; } = ""; // Платформа (Coursera, Stepik и т.д.)
-        public string Certificate { get; set; } = ""; // Сертификат после прохождения
+        //public string Certificate { get; set; } = ""; // Сертификат после прохождения
+        public byte[] Certificate { get; set; }  // Сертификат после прохождения
         public int Hours { get; set; } // Количество часов
     }
 }

@@ -3,7 +3,8 @@
     public class CourseDTO: AchievementDTO
     {
         public string Platform { get; set; } = ""; // Платформа (Coursera, Stepik и т.д.)
-        public string Certificate { get; set; } = ""; // Сертификат после прохождения
+        //public string Certificate { get; set; } = ""; // Сертификат после прохождения
+        public IFormFile Certificate { get; set; }
         public int Hours { get; set; } // Количество часов
     }
 }
